@@ -1,0 +1,64 @@
+# API说明文档
+
+## 根部API https://fingerprint.com
+
+### 登录
+### /tglogin
+- Method: POST
+- Request: 【body】
+```json
+{
+    "initData": "Telegram.WebApp.initData", //Telegram 用户数据
+    "fingerprint": "详情 ： https://demo.fingerprint.com/" //指纹
+}
+```
+- Response:
+```json
+{
+    "token": "xxxxxx",
+    "code": "0正常"
+}
+```
+
+
+### 开始游戏
+#### /startgame 
+- Method: POST
+- Request: 【body】
+```json
+{
+    "token": "/tglogin 返回的token",
+    "userid": 12345678
+}
+```
+### 拾取奖励
+#### /pickup 
+- Method: POST
+- Request: 【body】
+```json
+{
+    "token": "/tglogin 返回的token",
+    "userid": 12345678
+}
+```
+
+### 签到界面初始化
+#### /sign 
+- Method: POST
+- Request: 【body】
+```json
+{
+    "token": "/tglogin 返回的token",
+    "userid": 12345678
+}
+```
+### 签到动作
+#### /singnin 
+- Method: POST
+- Request: 【body】
+```json
+{
+    "token": "/tglogin 返回的token",
+    "userid": 12345678
+}
+```
