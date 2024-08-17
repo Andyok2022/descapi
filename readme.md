@@ -20,6 +20,49 @@
 }
 ```
 
+### 背包
+#### /backpack
+- Method: POST
+- Request: 【body】
+```json
+{
+    "token": "/tglogin 返回的token",
+    "userid": 12345678
+}
+```
+- Response:
+
+```json
+{
+  "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
+  "data": [
+    {
+      "id": 1,
+      "goodsID": "101",
+      "time": 1623871713132,//时间戳
+    }
+  ]
+}
+```
+
+### 切换武器
+#### /weapons
+- Method: POST
+- Request: 【body】
+```json
+{
+    "token": "/tglogin 返回的token",
+    "userid": 12345678,
+    "goodsID": 101 //武器ID
+}
+```
+- Response:
+```json
+{
+    "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示"
+}
+```
+
 
 ### 开始游戏
 #### /startgame 
@@ -295,7 +338,7 @@
 }
 ```
 
-### 刷新体力
+### 刷新体力 (推荐每3-5分钟自动请求一次)
 #### /refresh
 - Method: POST
 - Request: 【body】
@@ -320,14 +363,20 @@
 ```json
 {
     "token": "/tglogin 返回的token",
-    "userid": 12345678
+    "userid": 12345678,
+    "start": 0,//第几条开始，默认0,可选参数
+    "end": 100 //第几条结束，默认100,可选参数
 }
 ```
 - Response:
+
 ```json
 {
-    "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
-    
+  "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
+  "data":[],
+  "count": 1,//总数
+  "start": 0,//第几条开始，默认0
+  "end": 100,//第几条结束，默认100
 }
 ```
 
@@ -342,9 +391,20 @@
 }
 ```
 - Response:
+
 ```json
 {
-    "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
-    
+  "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
+  "data": [
+    {
+      id: 1,
+      desc: "任务描述",
+      type: "1 邀请 2 进入频道 3消耗 4消耗TRX 5充值TRX 6购买盲盒",
+      count: "完成任务数量",
+      gameAmount: "奖励游戏币",
+      zfbAmount: "奖励自发币",
+      trxAmount: "奖励TRX"
+    }
+  ]
 }
 ```
