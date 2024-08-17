@@ -2,7 +2,7 @@
 
 ## 根部API https://vvk3.com
 
-### 登录
+### 登录，前提条件要访问机器人 START 后 才会注册用户
 ### /tglogin
 - Method: POST
 - Request: 【body】
