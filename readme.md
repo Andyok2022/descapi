@@ -16,8 +16,8 @@
 - Response:
 ```json
 {
-    "token": "xxxxxx",
-    "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示"
+  token : "xxxxxx",
+  code : "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示"
 }
 ```
 
@@ -27,16 +27,16 @@
 - Request: 【body】
 ```json
 {
-    "token": "/tglogin 返回的token",
-    "userid": 12345678
+  token : "/tglogin 返回的token",
+  userid: 12345678
 }
 ```
 - Response:
 
 ```json
 {
-  "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
-  "data": [
+  code : "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
+  data: [
     {
       "id": 1,
       "goodsID": "101",
@@ -52,15 +52,15 @@
 - Request: 【body】
 ```json
 {
-    "token": "/tglogin 返回的token",
-    "userid": 12345678,
-    "goodsID": 101 //武器ID
+  token : "/tglogin 返回的token",
+  userid: 12345678,
+  goodsID: 101 //武器ID
 }
 ```
 - Response:
 ```json
 {
-    "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示"
+   code : "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示"
 }
 ```
 
@@ -71,14 +71,46 @@
 - Request: 【body】
 ```json
 {
-    "token": "/tglogin 返回的token",
-    "userid": 12345678
+  token : "/tglogin 返回的token",
+  userid: 12345678
 }
 ```
 - Response:
+
 ```json
 {
-    "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示"
+  code : "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
+  trx: 1, //可得到的TRX数量
+  trxPoint : 1, //可得到的TRX 地点数量
+  levelConfig:{//关卡数据
+    lv: 1,
+    //路段配置
+    path: ['P000', 'P001', 'P001', 'P001', 'P001', 'P001', 'P001', 'P999'],
+
+    //敌人
+    // ['触发点Id, 敌人类型id, 最小数量, 最大数量 ']
+    enemy: [
+      ['0,0,35,35'],
+      ['0,0,20,20'],
+      ['0,0,20,30'],
+      ['0,0,20,25'],
+      ['0,0,30,45'],
+      ['0,0,45,45'],
+      ['0,0,40,45'],
+      null,
+    ],
+    /** 道具类型:(0-武器,1-陷阱,2-人数),   道具具体分类,  道具数量 , 道具配置参数*/
+    prop: [
+      null,
+      null,
+      [2, 'x5', '+10', 0],
+      [1, 0, 1, 0],
+      [0, 0, 0, '3'],
+      [2, 'x3', '+20', 0],
+      [1, 2, 1, 2],
+      null
+    ]
+  }
 }
 ```
 
@@ -89,14 +121,14 @@
 - Request: 【body】
 ```json
 {
-    "token": "/tglogin 返回的token",
-    "userid": 12345678
+  token : "/tglogin 返回的token",
+  userid: 12345678
 }
 ```
 - Response:
 ```json
 {
-    "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示"
+  code : "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示"
 }
 ```
 
@@ -106,15 +138,15 @@
 - Request: 【body】
 ```json
 {
-    "token": "/tglogin 返回的token",
-    "userid": 12345678,
-    "result": 1, //1终点结束, 2中途死亡
+  token : "/tglogin 返回的token",
+  userid: 12345678,
+  "result": 1, //1终点结束, 2中途死亡
 }
 ```
 - Response:
 ```json
 {
-    "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示"
+  code : "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示"
 }
 ```
 
@@ -125,17 +157,17 @@
 - Request: 【body】
 ```json
 {
-    "token": "/tglogin 返回的token",
-    "userid": 12345678
+  token : "/tglogin 返回的token",
+  userid: 12345678
 }
 ```
 - Response:
 ```json
 {
-  "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
-  "data": {
-    "list": [],//签到列表奖励内容 展示
-    "count": 1,//当前签到次数，如果是0 从未签到过，以此类推 如果是7则所有签到完成
+  code : "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
+  data: {
+  list: [],//签到列表奖励内容 展示
+  count: 1,//当前签到次数，如果是0 从未签到过，以此类推 如果是7则所有签到完成
   }
 }
 ```
@@ -147,14 +179,14 @@
 - Request: 【body】
 ```json
 {
-    "token": "/tglogin 返回的token",
-    "userid": 12345678
+  token : "/tglogin 返回的token",
+  userid: 12345678
 }
 ```
 - Response:
 ```json
 {
-    "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示"
+  code : "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示"
 }
 ```
 
@@ -165,24 +197,24 @@
 - Request: 【body】
 ```json
 {
-    "token": "/tglogin 返回的token",
-    "userid": 12345678
+  token : "/tglogin 返回的token",
+  userid: 12345678
 }
 ```
 - Response:
 
 ```json
 {
-  "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
+  code : "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
   list: [
-    {id: 1, type: 'gameBalance', value: 500},
-    {id: 2, type: 'gameBalance', value: 1000},
-    {id: 3, type: 'gameBalance', value: 1500},
-    {id: 4, type: 'gameBalance', value: 2000},
-    {id: 5, type: 'trxBalance', value: 10},
-    {id: 6, type: 'zfbBalance', value: 100},
-    {id: 7, type: 'zfbBalance', value: 300},
-    {id: 8, type: 'zfbBalance', value: 500}
+  {id: 1, type: 'gameBalance', value: 500},
+  {id: 2, type: 'gameBalance', value: 1000},
+  {id: 3, type: 'gameBalance', value: 1500},
+  {id: 4, type: 'gameBalance', value: 2000},
+  {id: 5, type: 'trxBalance', value: 10},
+  {id: 6, type: 'zfbBalance', value: 100},
+  {id: 7, type: 'zfbBalance', value: 300},
+  {id: 8, type: 'zfbBalance', value: 500}
   ],
   //转盘奖励列表 type 币种类型 value 奖励数量
   "turntableTimes": 1,//剩余次数
@@ -196,19 +228,19 @@
 - Request: 【body】
 ```json
 {
-    "token": "/tglogin 返回的token",
-    "userid": 12345678
+  token : "/tglogin 返回的token",
+  userid: 12345678
 }
 ```
 - Response:
 ```json
 {
-    "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
-    "id":1,//奖励id
-    "gameBalance":123456,//更新 gameBalance余额
-    "trxBalance":123456,//更新 trxBalance余额
-    "zfbBalance":123456,//更新 zfbBalance余额
-    
+  code : "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
+  "id":1,//奖励id
+  "gameBalance":123456,//更新 gameBalance余额
+  "trxBalance":123456,//更新 trxBalance余额
+  "zfbBalance":123456,//更新 zfbBalance余额
+  
 }
 ```
 
@@ -218,19 +250,19 @@
 - Request: 【body】
 ```json
 {
-    "token": "/tglogin 返回的token",
-    "userid": 12345678
+  token : "/tglogin 返回的token",
+  userid: 12345678
 }
 ```
 - Response:
 ```json
 {
-    "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
-    "gameBalance":123456,// gameBalance余额
-    "trxBalance":123456,// trxBalance余额
-    "zfbBalance":123456,// zfbBalance余额
-    "availableTRX":123456,// 可转账trx余额
-    
+  code : "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
+  "gameBalance":123456,// gameBalance余额
+  "trxBalance":123456,// trxBalance余额
+  "zfbBalance":123456,// zfbBalance余额
+  "availableTRX":123456,// 可转账trx余额
+  
 }
 ```
 
@@ -241,16 +273,16 @@
 - Request: 【body】
 ```json
 {
-    "token": "/tglogin 返回的token",
-    "userid": 12345678,
-    "trxBalance": 123456,//转账数量
-    "toAddress": "TKJFKKDSKHKJFJLDFLKFLKFKLSFLK"//TRX地址
+  token : "/tglogin 返回的token",
+  userid: 12345678,
+  "trxBalance": 123456,//转账数量
+  "toAddress": "TKJFKKDSKHKJFJLDFLKFLKFKLSFLK"//TRX地址
 }
 ```
 - Response:
 ```json
 {
-    "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
+  code : "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
 }
 ```
 
@@ -261,28 +293,28 @@
 - Request: 【body】
 ```json
 {
-    "token": "/tglogin 返回的token",
-    "userid": 12345678,
+  token : "/tglogin 返回的token",
+  userid: 12345678,
 }
 ```
 - Response:
 ```json
 {
-    "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
-     "data": [
-        {
-            "id": 1,
-            "userid": 123456,
-            "amount": 100,
-            "type": "0",//0转出 1转入
-            "address": "address",
-            "txid": "address",
-            "time": "时间戳"
-        }
-     ],
-     count: 1,//总数
-     start: 0,//第几条开始，默认0
-     end: 100,//第几条结束，默认100
+   code : "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
+   data: [
+      {
+        "id": 1,
+        userid: 123456,
+        "amount": 100,
+        "type": "0",//0转出 1转入
+        "address": "address",
+        "txid": "address",
+        "time": "时间戳"
+      }
+   ],
+   count: 1,//总数
+   start: 0,//第几条开始，默认0
+   end: 100,//第几条结束，默认100
   
 }
 ```
@@ -294,15 +326,15 @@
 - Request: 【body】
 ```json
 {
-    "token": "/tglogin 返回的token",
-    "userid": 12345678
+  token : "/tglogin 返回的token",
+  userid: 12345678
 }
 ```
 - Response:
 ```json
 {
-    "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
-    
+  code : "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
+  
 }
 ```
 
@@ -313,8 +345,8 @@
 - Request: 【body】
 ```json
 {
-    "token": "/tglogin 返回的token",
-    "userid": 12345678
+  token : "/tglogin 返回的token",
+  userid: 12345678
 }
 ```
 - Response:
@@ -337,15 +369,15 @@
 - Request: 【body】
 ```json
 {
-    "token": "/tglogin 返回的token",
-    "userid": 12345678
+  token : "/tglogin 返回的token",
+  userid: 12345678
 }
 ```
 - Response:
 ```json
 {
-    "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
-    
+  code : "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
+  
 }
 ```
 
@@ -355,18 +387,18 @@
 - Request: 【body】
 ```json
 {
-    "token": "/tglogin 返回的token",
-    "userid": 12345678,
-    "start": 0,//第几条开始，默认0,可选参数
-    "end": 100 //第几条结束，默认100,可选参数
+  token : "/tglogin 返回的token",
+  userid: 12345678,
+  "start": 0,//第几条开始，默认0,可选参数
+  "end": 100 //第几条结束，默认100,可选参数
 }
 ```
 - Response:
 
 ```json
 {
-  "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
-  "data":[],
+  code : "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
+  data:[],
   "count": 1,//总数
   "start": 0,//第几条开始，默认0
   "end": 100,//第几条结束，默认100
@@ -379,25 +411,25 @@
 - Request: 【body】
 ```json
 {
-    "token": "/tglogin 返回的token",
-    "userid": 12345678
+  token : "/tglogin 返回的token",
+  userid: 12345678
 }
 ```
 - Response:
 
 ```json
 {
-  "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
-  "data": [
-    {
-      id: 1,
-      desc: "任务描述",
-      type: "1 邀请 2 进入频道 3消耗 4消耗TRX 5充值TRX 6购买盲盒",
-      count: "完成任务数量",
-      gameAmount: "奖励游戏币",
-      zfbAmount: "奖励自发币",
-      trxAmount: "奖励TRX"
-    }
+  code : "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
+  data: [
+  {
+    id: 1,
+    desc: "任务描述",
+    type: "1 邀请 2 进入频道 3消耗 4消耗TRX 5充值TRX 6购买盲盒",
+    count: "完成任务数量",
+    gameAmount: "奖励游戏币",
+    zfbAmount: "奖励自发币",
+    trxAmount: "奖励TRX"
+  }
   ]
 }
 ```
