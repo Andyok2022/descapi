@@ -1,6 +1,6 @@
 # API说明文档
 
-## 根部API https://vvk3.com
+## 根部API https://api1.vvk3.com （未来需要动态获取）
 
 ### 登录，前提条件要访问机器人 START 后 才会注册用户
 ### /tglogin
@@ -156,46 +156,14 @@
 {
   "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
   list: [
-    {
-      id: 1,
-      type: 'gameBalance',
-      value: 500
-    },
-    {
-      id: 2,
-      type: 'gameBalance',
-      value: 1000
-    },
-    {
-      id: 3,
-      type: 'gameBalance',
-      value: 1500
-    },
-    {
-      id: 4,
-      type: 'gameBalance',
-      value: 2000
-    },
-    {
-      id: 5,
-      type: 'trxBalance',
-      value: 10
-    },
-    {
-      id: 6,
-      type: 'zfbBalance',
-      value: 100
-    },
-    {
-      id: 7,
-      type: 'zfbBalance',
-      value: 300
-    },
-    {
-      id: 8,
-      type: 'zfbBalance',
-      value: 500
-    }
+    {id: 1, type: 'gameBalance', value: 500},
+    {id: 2, type: 'gameBalance', value: 1000},
+    {id: 3, type: 'gameBalance', value: 1500},
+    {id: 4, type: 'gameBalance', value: 2000},
+    {id: 5, type: 'trxBalance', value: 10},
+    {id: 6, type: 'zfbBalance', value: 100},
+    {id: 7, type: 'zfbBalance', value: 300},
+    {id: 8, type: 'zfbBalance', value: 500}
   ],
   //转盘奖励列表 type 币种类型 value 奖励数量
   "turntableTimes": 1,//剩余次数
