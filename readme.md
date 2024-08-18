@@ -100,6 +100,24 @@
 }
 ```
 
+### 游戏结束
+#### /gameover
+- Method: POST
+- Request: 【body】
+```json
+{
+    "token": "/tglogin 返回的token",
+    "userid": 12345678,
+    "result": 1, //1终点结束, 2中途死亡
+}
+```
+- Response:
+```json
+{
+    "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示"
+}
+```
+
 
 ### 签到界面初始化
 #### /sign 
