@@ -28,7 +28,7 @@
 ## 登录，前提条件要访问机器人 START 后 才会注册用户
 ### `/tglogin`
 - **Method**: POST
-- **Request**: 
+- **Request**:
     ```json
     {
         "initData": "Telegram.WebApp.initData", //Telegram 用户数据
@@ -46,7 +46,7 @@
 ## 背包
 ### `/backpack`
 - **Method**: POST
-- **Request**: 
+- **Request**:
     ```json
     {
         "token": "/tglogin 返回的token",
@@ -70,7 +70,7 @@
 ## 切换武器
 ### `/weapons`
 - **Method**: POST
-- **Request**: 
+- **Request**:
     ```json
     {
         "token": "/tglogin 返回的token",
@@ -88,7 +88,7 @@
 ## 开始游戏
 ### `/startgame`
 - **Method**: POST
-- **Request**: 
+- **Request**:
     ```json
     {
         "token": "/tglogin 返回的token",
@@ -99,8 +99,10 @@
     ```json
     {
         "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
-        "trx": 1, //可得到的TRX数量
-        "trxPoint": 1, //可得到的TRX 地点数量
+        "tRXBalance": 1, //可得到的TRX数量 ，部分游戏过程 部分结束抽奖 随机 根据场景使用 /pickup 接口获得
+        "gameBalance": 1, //结束后可得到的游戏币数量，部分游戏过程 部分结束抽奖 随机 根据场景使用 /pickup 接口获得
+        "zFBBalance": 1, //结束后可得到的自发币数量，部分游戏过程 部分结束抽奖 随机 根据场景使用 /pickup 接口获得
+        "trxPoint": 1, //可得到的TRX 地点数量，部分游戏过程 部分结束抽奖 随机 根据场景使用 /pickup 接口获得
         "Enemy": Enemy, //敌方属性
         "WeaponCfg": WeaponCfg, //武器配置
         "TrapCfg": TrapCfg, //陷阱配置
@@ -294,11 +296,13 @@
 ## 拾取奖励
 ### `/pickup`
 - **Method**: POST
-- **Request**: 
+- **Request**:
     ```json
     {
         "token": "/tglogin 返回的token",
-        "userid": 12345678
+        "userid": 12345678,
+        "type": 0 //币种类型 0 游戏币，1自发币，2 TRX
+        "amount": 10 //币数量
     }
     ```
 - **Response**:
@@ -311,7 +315,7 @@
 ## 游戏结束
 ### `/gameover`
 - **Method**: POST
-- **Request**: 
+- **Request**:
     ```json
     {
         "token": "/tglogin 返回的token",
@@ -329,7 +333,7 @@
 ## 签到界面初始化
 ### `/sign`
 - **Method**: POST
-- **Request**: 
+- **Request**:
     ```json
     {
         "token": "/tglogin 返回的token",
@@ -350,7 +354,7 @@
 ## 签到动作
 ### `/singnin`
 - **Method**: POST
-- **Request**: 
+- **Request**:
     ```json
     {
         "token": "/tglogin 返回的token",
@@ -367,7 +371,7 @@
 ## 转盘初始化
 ### `/turntable`
 - **Method**: POST
-- **Request**: 
+- **Request**:
     ```json
     {
         "token": "/tglogin 返回的token",
@@ -395,7 +399,7 @@
 ## 转盘抽奖
 ### `/turntablego`
 - **Method**: POST
-- **Request**: 
+- **Request**:
     ```json
     {
         "token": "/tglogin 返回的token",
@@ -416,7 +420,7 @@
 ## 余额查询
 ### `/balance`
 - **Method**: POST
-- **Request**: 
+- **Request**:
     ```json
     {
         "token": "/tglogin 返回的token",
@@ -437,7 +441,7 @@
 ## 转账TRX
 ### `/transfertrx`
 - **Method**: POST
-- **Request**: 
+- **Request**:
     ```json
     {
         "token": "/tglogin 返回的token",
@@ -456,7 +460,7 @@
 ## TRX记录查询
 ### `/trxrecord`
 - **Method**: POST
-- **Request**: 
+- **Request**:
     ```json
     {
         "token": "/tglogin 返回的token",
@@ -487,7 +491,7 @@
 ## 商店列表
 ### `/store`
 - **Method**: POST
-- **Request**: 
+- **Request**:
     ```json
     {
         "token": "/tglogin 返回的token",
@@ -504,7 +508,7 @@
 ## 购买物品
 ### `/buy`
 - **Method**: POST
-- **Request**: 
+- **Request**:
     ```json
     {
         "token": "/tglogin 返回的token",
@@ -527,7 +531,7 @@
 ## 刷新体力
 ### `/refresh`
 - **Method**: POST
-- **Request**: 
+- **Request**:
     ```json
     {
         "token": "/tglogin 返回的token",
@@ -544,7 +548,7 @@
 ## 刷新邀请列表
 ### `/invite`
 - **Method**: POST
-- **Request**: 
+- **Request**:
     ```json
     {
         "token": "/tglogin 返回的token",
@@ -567,7 +571,7 @@
 ## 任务列表
 ### `/task`
 - **Method**: POST
-- **Request**: 
+- **Request**:
     ```json
     {
         "token": "/tglogin 返回的token",
