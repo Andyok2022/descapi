@@ -331,10 +331,16 @@
 }
 ```
 - Response:
+
 ```json
 {
-    "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
-    
+  code: "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
+  gameBalance: 123456, //更新 gameBalance余额 code 非 0 时为空
+  coinsCount: 123456, //更新 coinsCount余额  code 非 0 时为空
+  teamCount: 123456, //更新 teamCount余额  code 非 0 时为空
+  giantCount: 123456, //更新 giantCount余额  code 非 0 时为空
+  zFBBalance: 123456, //更新 zFBBalance余额  code 非 0 时为空
+  tRXBalance: 123456, //更新 tRXBalance余额  code 非 0 时为空
 }
 ```
 
