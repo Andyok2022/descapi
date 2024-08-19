@@ -47,7 +47,7 @@
   ```json
   UserObject
   {
-      "id": "用户信息",
+      "id": "userid",
       "first_name": "用户昵称 1",
       "last_name": "用户昵称 2",
       "username": "用户搜索名@xxx",
