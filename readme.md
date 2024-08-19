@@ -33,7 +33,7 @@
     ```json
     {
         "initData": "Telegram.WebApp.initData", //Telegram 用户数据
-        "fingerprint": "详情 ： https://demo.fingerprint.com/" //指纹
+        "fingerprint": "详情 ： https://demo.fingerprint.com/" //指纹 每个手机唯一值 用于确保同手机多tg登录互相邀请刷  TRX 行为
     }
     ```
   - **Response**:
