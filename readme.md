@@ -41,9 +41,53 @@
     {
         "token": "xxxxxx",
         "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示"
+        "userInfo": UserObject,
     }
     ```
-
+UserObject
+```angular2html
+{
+    "id": "用户信息",
+    "first_name": "用户昵称 1",
+    "last_name": "用户昵称 2",
+    "username": "用户搜索名@xxx",
+    "headpic": "用户头像",
+    "userid": "用户id",
+    "superiorID": "上级id",
+    "physicalPower": "体力 每分钟恢复 1体力，邀请2个好友后增加100% ，一局扣10点",
+    "physicalPowerTime": "刷新时间",
+    "physicalPowerMax": "体力上限",
+    "resurrection": "复活次数",
+    "levels": "当前关卡",
+    "gameBalance": "游戏余额",
+    "tRXBalance": "TRX余额",
+    "zFBBalance": "未来发的币",
+    "consumption": "消耗TRX余额总数",
+    "teamCount": "兵数量",
+    "coinsCount": "金币加成",
+    "giantCount": "防爆兵数量",
+    "currentWeapons": "当前武器",
+    "turntableTimes": "转盘剩余次数",
+    "vipExperience": "VIP经验",
+    "addressTRXBalance": "地址TRX金额",
+    "addressUSDTBalance": "地址USDT余额",
+    "address": "用户地址",
+    "lastOnlineTime": "最后一次在线时间",
+    "maximumGameingTRX": "游戏过程可获得最大trx",
+    "addGroupTime": "加群时间",
+    "groupID": "所属群组id",
+    "premium": "是否是优质的",
+    "airdropgameBalance": "已经空投了多少游戏币，邀请奖励",
+    "airdropzFBBalance": "已经空投了多少ZFB，邀请奖励",
+    "airdropBalanceTRX": "已经空投了多少TRX，邀请奖励",
+    "language_code": "telegram语言版本",
+    "isquit": "0 是 默认 ， 时间戳 是 退群时间，1 是回归用户",
+    "ismute": "是否禁言",
+    "token": "token",
+    "tokenLife": "token生命周期",
+    "fingerprint": "指纹"
+  }
+```
 ## 背包
 ### `/backpack`
 - **Method**: POST
