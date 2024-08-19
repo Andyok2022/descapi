@@ -1,7 +1,7 @@
 # API 说明文档
 
 ## 目录
-1. [登录|前提条件要访问机器人 START 后 才会注册用户](#登录|前提条件要访问机器人 START 后 才会注册用户)
+1. [登录](#登录)
 2. [背包](#背包)
 3. [切换武器](#切换武器)
 4. [开始游戏](#开始游戏)
@@ -25,7 +25,8 @@
 #### [Postman DEMO](https://github.com/Andyok2022/descapi/blob/main/Test.postman_collection.json)
 
 
-## 登录|前提条件要访问机器人 START 后 才会注册用户
+## 登录
+##### 前提条件要访问机器人 START 后 才会注册用户
 ### `/tglogin`
 - **Method**: POST
 - **Request**:
