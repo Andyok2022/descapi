@@ -605,7 +605,7 @@
     ```json
     {
         "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
-        "data": [{first_name,last_name,username,userid,headpic}],//邀请的用户集
+        "data": [{first_name,last_name,username,userid,headpic,ismute}],//邀请的用户集
         "count": 1, //总数
         "start": 0, //第几条开始，默认0
         "end": 100 //第几条结束，默认100
