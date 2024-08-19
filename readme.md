@@ -47,12 +47,11 @@
   ```json
   UserObject
   {
-      "id": "userid",
+      "userid": "userid",
       "first_name": "用户昵称 1",
       "last_name": "用户昵称 2",
       "username": "用户搜索名@xxx",
       "headpic": "用户头像",
-      "userid": "用户id",
       "superiorID": "上级id",
       "physicalPower": "体力 每分钟恢复 1体力，邀请2个好友后增加100% ，一局扣10点",
       "physicalPowerTime": "刷新时间",
