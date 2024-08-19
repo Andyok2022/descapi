@@ -3,7 +3,8 @@
 		"_postman_id": "e6c112cc-1b96-443c-8869-3250672b8b5f",
 		"name": "Test",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "20527496"
+		"_exporter_id": "20527496",
+		"_collection_link": "https://grey-water-925476.postman.co/workspace/New-Team-Workspace~557eb2a0-3409-452e-935f-bb7e54c6a65e/collection/20527496-e6c112cc-1b96-443c-8869-3250672b8b5f?action=share&source=collection_link&creator=20527496"
 	},
 	"item": [
 		{
@@ -12,8 +13,8 @@
 				"method": "POST",
 				"header": [],
 				"body": {
-					"mode": "formdata",
-					"formdata": [
+					"mode": "urlencoded",
+					"urlencoded": [
 						{
 							"key": "initData",
 							"value": "query_id=AAFct25yAgAAAFy3bnIHnz_i&user=%7B%22id%22%3A6214825820%2C%22first_name%22%3A%22%E6%B3%A2%22%2C%22last_name%22%3A%22%E7%89%B9%E5%8B%92%22%2C%22username%22%3A%22MountainEagle_cn%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%7D&auth_date=1723901617&hash=86548f65ecdce0a06dca125577530f755328a1be1a23c5279c2c86c8964b9cc7",
