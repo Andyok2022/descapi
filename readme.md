@@ -87,6 +87,7 @@
       "ismute": "是否禁言",
       "token": "token",
       "tokenLife": "token生命周期",
+      "inviteUrl": "邀请链接",
       "fingerprint": "指纹"
     }
   ```
@@ -388,7 +389,8 @@
         "data": {
             "list": [], //签到列表奖励内容 展示
             "count": 1 //当前签到次数，如果是0 从未签到过，以此类推 如果是7则所有签到完成
-        }
+        },
+        "todayIsAvailable": 1 //今天是否可以签到 0 不可以 1 可以
     }
     ```
 
@@ -405,6 +407,7 @@
     ```json
     {
         "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示"
+        "gameBalance": 123456, //更新 gameBalance余额
     }
     ```
 
