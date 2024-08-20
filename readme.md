@@ -23,7 +23,7 @@
 ## 根部API https://api1.vvk3.com （未来需要动态获取）
 
 #### [Postman DEMO](https://github.com/Andyok2022/descapi/blob/main/Test.postman_collection.json)
-
+##### 注：所有token 通过 Heade参数添加 :"Authorization"："token" 传递过来
 
 ## 登录
 ##### 前提条件要访问机器人 START 后 才会注册用户
