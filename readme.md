@@ -19,6 +19,7 @@
 16. [刷新体力](#刷新体力)
 17. [刷新已存在的邀请列表](#刷新已存在的邀请列表)
 18. [任务列表](#任务列表)
+19. [关卡数据](#关卡数据)
 
 ## 根部API https://api1.vvk3.com （未来需要动态获取）
 
@@ -148,195 +149,9 @@
         "gameBalance": 1, //结束后可得到的游戏币数量，部分游戏过程 部分结束抽奖 随机 根据场景使用 /pickup 接口获得
         "zFBBalance": 1, //结束后可得到的自发币数量，部分游戏过程 部分结束抽奖 随机 根据场景使用 /pickup 接口获得
         "trxPoint": 1, //可得到的TRX 地点数量，部分游戏过程 部分结束抽奖 随机 根据场景使用 /pickup 接口获得
-        "Enemy": Enemy, //敌方属性
-        "WeaponCfg": WeaponCfg, //武器配置
-        "TrapCfg": TrapCfg, //陷阱配置
-        "levelConfig": levelConfig //关卡数据
+        
     }
     ```
-    * **Enemy** : 敌方属性
-        ```json
-        {
-            //普通兵
-            "0": {
-                "spd": 7.2,
-                "atk": 2,
-                "hp": 4,
-                "scale": 1.2
-            },
-            //炸弹
-            "1": {
-                "spd": 8.2,
-                "atk": 2,
-                "hp": 8,
-                "scale": 1.2,
-                "boomRadius": 2.5, //爆炸半径
-                "boomAtk": 2
-            },
-            //刺客
-            "2": {
-                "spd": 15,
-                "atk": 1,
-                "hp": 5,
-                "scale": 1.5
-            },
-            //巨人
-            "3": {
-                "spd": 7.8,
-                "atk": 1,
-                "hp": 15,
-                "scale": 3
-            },
-            //Boss
-            "4": {
-                "spd": 8.2,
-                "atk": 3,
-                "hp": 32,
-                "scale": 2.4
-            }
-        }
-        ```
-    * **WeaponCfg** : 武器配置: 类型顺序与 `weaponType` 一致
-        ```json
-        {
-            //手枪
-            "0": {
-                "atk": 1,
-                "atkSpd": 2,
-                "perfab": "Pistol",
-                "bullet": "mergePistolBullet",
-                "bulletSpd": 20,
-                "propScale": 5 //作为道具显示的缩放
-            },
-            //短枪
-            "1": {
-                "atk": 1.5,
-                "atkSpd": 1,
-                "perfab": "Shotgun",
-                "bullet": "mergeShotgunBullet",
-                "bulletSpd": 20,
-                "propScale": 3 //作为道具显示的缩放
-            },
-            //喷火枪
-            "2": {
-                "atk": 4,
-                "atkSpd": 1,
-                "perfab": "FireGun",
-                "bullet": "mergeFireGunBullet",
-                "bulletSpd": 20,
-                "propScale": 2 //作为道具显示的缩放
-            },
-            //机关枪
-            "3": {
-                "atk": 2,
-                "atkSpd": 3,
-                "perfab": "MachineGun",
-                "bullet": "mergeMachineGunBullet",
-                "bulletSpd?": 30,
-                "propScale": 2 //作为道具显示的缩放
-            },
-            //手榴弹
-            "4": {
-                "atk": 1,
-                "atkSpd": 1,
-                "perfab": "Grenades",
-                "bullet": " ", //todo
-                "bulletSpd": 5,
-                "propScale": 2, //作为道具显示的缩放
-                "boomRadius": 3 //爆炸范围
-            },
-            //无人机
-            "5": {
-                "atk": 1.5,
-                "atkSpd": 8,
-                "perfab": "Drone",
-                "bullet": "mergeDroneBullet",
-                "bulletSpd": 20,
-                "propScale": 2, //作为道具显示的缩放
-                "droneheight": 7
-            }
-        }
-        ```
-    * **TrapCfg** : 陷阱配置: 类型顺序与 `weaponType` 一致
-        ```json
-        {
-            //圆形电锯
-            "0": {
-                "atk": 15, //攻击力
-                "perfab": "ElectricSaw",
-                "isMuilty": false
-            },
-            //地刺
-            "1": {
-                "atk": 15,
-                "perfab": "Spininess",
-                "isMuilty": false
-            },
-            //锤子
-            "2": {
-                "atk": 15,
-                "perfab": "Hammer",
-                "isMuilty": false
-            },
-            //导弹
-            "3": {
-                "atk": 15,
-                "perfab": "Rocket",
-                "isMuilty": true
-            },
-            //炮台
-            "4": {
-                "atk": 15,
-                "atkSpd": 10,
-                "bulletType": "mergeFortBarbetteBullet",
-                "perfab": "FortBarbette",
-                "isMuilty": true
-            },
-            //高空钉
-            "5": {
-                "atk": 15,
-                "perfab": "UpperAirNail",
-                "isMuilty": false
-            },
-            //地雷
-            "6": {
-                "atk": 15,
-                "perfab": "LandMine",
-                "isMuilty": true
-            }
-        }
-        ```
-    * **levelConfig** : 关卡数据
-        ```json
-        {
-            "lv": 1,
-            //路段配置
-            "path": ["P000", "P001", "P001", "P001", "P001", "P001", "P001", "P999"],
-            //敌人
-            // ['触发点Id, 敌人类型id, 最小数量, 最大数量 ']
-            "enemy": [
-                ["0,0,35,35"],
-                ["0,0,20,20"],
-                ["0,0,20,30"],
-                ["0,0,20,25"],
-                ["0,0,30,45"],
-                ["0,0,45,45"],
-                ["0,0,40,45"],
-                null
-            ],
-            /** 道具类型:(0-武器,1-陷阱,2-人数),   道具具体分类,  道具数量 , 道具配置参数*/
-            "prop": [
-                null,
-                null,
-                [2, "x5", "+10", 0],
-                [1, 0, 1, 0],
-                [0, 0, 0, "3"],
-                [2, "x3", "+20", 0],
-                [1, 2, 1, 2],
-                null
-            ]
-        }
-        ```
 
 ## 拾取奖励
 ### `/pickup`
@@ -640,3 +455,207 @@
         ]
     }
     ```
+  
+## 关卡数据
+### ·`/levelsData`
+- **Method**: POST
+- **Request**:
+    ```json
+    {
+        "userid": 12345678
+    }
+    ```
+- **Response**:
+    ```json
+    {
+        "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
+        "Enemy": Enemy, //敌方属性
+        "WeaponCfg": WeaponCfg, //武器配置
+        "TrapCfg": TrapCfg, //陷阱配置
+        "levelConfig": levelConfig //关卡数据
+    }
+    ```
+
+  * **Enemy** : 敌方属性
+      ```json
+      {
+          //普通兵
+          "0": {
+              "spd": 7.2,
+              "atk": 2,
+              "hp": 4,
+              "scale": 1.2
+          },
+          //炸弹
+          "1": {
+              "spd": 8.2,
+              "atk": 2,
+              "hp": 8,
+              "scale": 1.2,
+              "boomRadius": 2.5, //爆炸半径
+              "boomAtk": 2
+          },
+          //刺客
+          "2": {
+              "spd": 15,
+              "atk": 1,
+              "hp": 5,
+              "scale": 1.5
+          },
+          //巨人
+          "3": {
+              "spd": 7.8,
+              "atk": 1,
+              "hp": 15,
+              "scale": 3
+          },
+          //Boss
+          "4": {
+              "spd": 8.2,
+              "atk": 3,
+              "hp": 32,
+              "scale": 2.4
+          }
+      }
+      ```
+  * **WeaponCfg** : 武器配置: 类型顺序与 `weaponType` 一致
+      ```json
+      {
+          //手枪
+          "0": {
+              "atk": 1,
+              "atkSpd": 2,
+              "perfab": "Pistol",
+              "bullet": "mergePistolBullet",
+              "bulletSpd": 20,
+              "propScale": 5 //作为道具显示的缩放
+          },
+          //短枪
+          "1": {
+              "atk": 1.5,
+              "atkSpd": 1,
+              "perfab": "Shotgun",
+              "bullet": "mergeShotgunBullet",
+              "bulletSpd": 20,
+              "propScale": 3 //作为道具显示的缩放
+          },
+          //喷火枪
+          "2": {
+              "atk": 4,
+              "atkSpd": 1,
+              "perfab": "FireGun",
+              "bullet": "mergeFireGunBullet",
+              "bulletSpd": 20,
+              "propScale": 2 //作为道具显示的缩放
+          },
+          //机关枪
+          "3": {
+              "atk": 2,
+              "atkSpd": 3,
+              "perfab": "MachineGun",
+              "bullet": "mergeMachineGunBullet",
+              "bulletSpd?": 30,
+              "propScale": 2 //作为道具显示的缩放
+          },
+          //手榴弹
+          "4": {
+              "atk": 1,
+              "atkSpd": 1,
+              "perfab": "Grenades",
+              "bullet": " ", //todo
+              "bulletSpd": 5,
+              "propScale": 2, //作为道具显示的缩放
+              "boomRadius": 3 //爆炸范围
+          },
+          //无人机
+          "5": {
+              "atk": 1.5,
+              "atkSpd": 8,
+              "perfab": "Drone",
+              "bullet": "mergeDroneBullet",
+              "bulletSpd": 20,
+              "propScale": 2, //作为道具显示的缩放
+              "droneheight": 7
+          }
+      }
+      ```
+  * **TrapCfg** : 陷阱配置: 类型顺序与 `weaponType` 一致
+      ```json
+      {
+          //圆形电锯
+          "0": {
+              "atk": 15, //攻击力
+              "perfab": "ElectricSaw",
+              "isMuilty": false
+          },
+          //地刺
+          "1": {
+              "atk": 15,
+              "perfab": "Spininess",
+              "isMuilty": false
+          },
+          //锤子
+          "2": {
+              "atk": 15,
+              "perfab": "Hammer",
+              "isMuilty": false
+          },
+          //导弹
+          "3": {
+              "atk": 15,
+              "perfab": "Rocket",
+              "isMuilty": true
+          },
+          //炮台
+          "4": {
+              "atk": 15,
+              "atkSpd": 10,
+              "bulletType": "mergeFortBarbetteBullet",
+              "perfab": "FortBarbette",
+              "isMuilty": true
+          },
+          //高空钉
+          "5": {
+              "atk": 15,
+              "perfab": "UpperAirNail",
+              "isMuilty": false
+          },
+          //地雷
+          "6": {
+              "atk": 15,
+              "perfab": "LandMine",
+              "isMuilty": true
+          }
+      }
+      ```
+  * **levelConfig** : 关卡数据
+      ```json
+      {
+          "lv": 1,
+          //路段配置
+          "path": ["P000", "P001", "P001", "P001", "P001", "P001", "P001", "P999"],
+          //敌人
+          // ['触发点Id, 敌人类型id, 最小数量, 最大数量 ']
+          "enemy": [
+              ["0,0,35,35"],
+              ["0,0,20,20"],
+              ["0,0,20,30"],
+              ["0,0,20,25"],
+              ["0,0,30,45"],
+              ["0,0,45,45"],
+              ["0,0,40,45"],
+              null
+          ],
+          /** 道具类型:(0-武器,1-陷阱,2-人数),   道具具体分类,  道具数量 , 道具配置参数*/
+          "prop": [
+              null,
+              null,
+              [2, "x5", "+10", 0],
+              [1, 0, 1, 0],
+              [0, 0, 0, "3"],
+              [2, "x3", "+20", 0],
+              [1, 2, 1, 2],
+              null
+          ]
+      }
+      ```
