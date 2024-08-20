@@ -28,6 +28,7 @@
 ## 登录
 ##### 前提条件要访问机器人 START 后 才会注册用户
 ### `/tglogin`
+##### 该api无需传token 其余都需要
 - **Method**: POST
   - **Request**:
       ```json
@@ -93,7 +94,6 @@
 - **Request**:
     ```json
     {
-        "token": "/tglogin 返回的token",
         "userid": 12345678
     }
     ```
@@ -117,7 +117,6 @@
 - **Request**:
     ```json
     {
-        "token": "/tglogin 返回的token",
         "userid": 12345678,
         "goodsID": 101 //武器ID
     }
@@ -135,7 +134,6 @@
 - **Request**:
     ```json
     {
-        "token": "/tglogin 返回的token",
         "userid": 12345678
     }
     ```
@@ -343,7 +341,6 @@
 - **Request**:
     ```json
     {
-        "token": "/tglogin 返回的token",
         "userid": 12345678,
         "type": 0 //币种类型 0 游戏币，1自发币，2 TRX
         "amount": 10 //币数量
@@ -362,7 +359,6 @@
 - **Request**:
     ```json
     {
-        "token": "/tglogin 返回的token",
         "userid": 12345678,
         "result": 1 //1终点结束, 2中途死亡
     }
@@ -380,7 +376,6 @@
 - **Request**:
     ```json
     {
-        "token": "/tglogin 返回的token",
         "userid": 12345678
     }
     ```
@@ -401,7 +396,6 @@
 - **Request**:
     ```json
     {
-        "token": "/tglogin 返回的token",
         "userid": 12345678
     }
     ```
@@ -418,7 +412,6 @@
 - **Request**:
     ```json
     {
-        "token": "/tglogin 返回的token",
         "userid": 12345678
     }
     ```
@@ -446,7 +439,6 @@
 - **Request**:
     ```json
     {
-        "token": "/tglogin 返回的token",
         "userid": 12345678
     }
     ```
@@ -467,7 +459,6 @@
 - **Request**:
     ```json
     {
-        "token": "/tglogin 返回的token",
         "userid": 12345678
     }
     ```
@@ -488,7 +479,6 @@
 - **Request**:
     ```json
     {
-        "token": "/tglogin 返回的token",
         "userid": 12345678,
         "trxBalance": 123456, //转账数量
         "toAddress": "TKJFKKDSKHKJFJLDFLKFLKFKLSFLK" //TRX地址
@@ -507,7 +497,6 @@
 - **Request**:
     ```json
     {
-        "token": "/tglogin 返回的token",
         "userid": 12345678
     }
     ```
@@ -538,7 +527,6 @@
 - **Request**:
     ```json
     {
-        "token": "/tglogin 返回的token",
         "userid": 12345678
     }
     ```
@@ -555,7 +543,6 @@
 - **Request**:
     ```json
     {
-        "token": "/tglogin 返回的token",
         "userid": 12345678
     }
     ```
@@ -578,7 +565,6 @@
 - **Request**:
     ```json
     {
-        "token": "/tglogin 返回的token",
         "userid": 12345678
     }
     ```
@@ -595,7 +581,6 @@
 - **Request**:
     ```json
     {
-        "token": "/tglogin 返回的token",
         "userid": 12345678,
         "start": 0, //第几条开始，默认0,可选参数
         "end": 100 //第几条结束，默认100,可选参数
@@ -630,7 +615,6 @@
 - **Request**:
     ```json
     {
-        "token": "/tglogin 返回的token",
         "userid": 12345678
     }
     ```
