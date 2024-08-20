@@ -80,6 +80,8 @@
       "airdropgameBalance": "已经空投了多少游戏币，邀请奖励",
       "airdropzFBBalance": "已经空投了多少ZFB，邀请奖励",
       "airdropBalanceTRX": "已经空投了多少TRX，邀请奖励",
+      "singninTime": "最后一次签到时间",
+      "lastLoginTime": "最后登录时间",
       "language_code": "telegram语言版本",
       "isquit": "0 是 默认 ， 时间戳 是 退群时间，1 是回归用户",
       "ismute": "是否禁言",
