@@ -480,7 +480,7 @@
         "gameAmount": "奖励游戏币",
         "zfbAmount": "奖励自发币",
         "trxAmount": "奖励TRX"
-      }
+    }
     ```
   
 ## 关卡数据
