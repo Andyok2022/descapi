@@ -379,7 +379,8 @@
 - **Request**:
     ```json
     {
-        "userid": 12345678
+        "userid": 12345678,
+        "goodsID": 101, //物品ID
     }
     ```
 - **Response**:
