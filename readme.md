@@ -43,6 +43,7 @@
     {
         "token": "xxxxxx",
         "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示"
+        "inviteUrl": "邀请链接",
         "userInfo": UserObject,
     }
     ```
@@ -318,7 +319,7 @@
 - **Request**:
     ```json
     {
-        "userid": 12345678
+        "userid": 1p2345678
     }
     ```
 - **Response**:
