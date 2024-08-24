@@ -390,6 +390,8 @@
     ```json
     {
         "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
+        "goodsID":0,//0 为购买盲盒
+        "getAmount":110,//如果goodsID 0 为购买盲盒的返奖TRX 余额
         "gameBalance": 123456, //更新 gameBalance余额
         "coinsCount": 123456, //更新 coinsCount余额
         "teamCount": 123456, //更新 teamCount余额
