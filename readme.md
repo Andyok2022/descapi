@@ -390,7 +390,7 @@
     ```json
     {
         "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
-        "goodsID":0,//0 为购买盲盒获得trx 其余的就是随机googsID
+        "goodsID":0,//0 为购买盲盒获得trx 其余的就是随机goodsID
         "getAmount":110,//购买盲盒获得的trx数量
         "goodsTimes":1,//购买盲盒中奖 goodsID为 301 - 303 的 数量
         "gameBalance": 123456, //更新 gameBalance余额
