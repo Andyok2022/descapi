@@ -441,7 +441,7 @@
             {
                 "id": 1,
                 "userid": 123456789, //用户id
-                "superiorID": 123456789, //上级id，用来比对data的userid
+                "subordinateID": 123456789, //上级id，用来比对data的userid
                 "type":1,//1 邀请 2 进入频道 3消耗 4消耗TRX 5充值TRX 6购买盲盒 7转账（提现）
                 "amount":10,//trx 数量
                 "inviteCount": 1,//0 第一把游戏的时候，大于1邀请第几个人的时候
