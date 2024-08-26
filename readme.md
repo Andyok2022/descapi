@@ -271,6 +271,7 @@
     {
         "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示",
         "id": 1, //奖励id
+        "turntableTimes": 1, //剩余次数
         "gameBalance": 123456, //更新 gameBalance余额
         "trxBalance": 123456, //更新 trxBalance余额
         "zfbBalance": 123456 //更新 zfbBalance余额
