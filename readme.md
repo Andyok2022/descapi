@@ -475,7 +475,8 @@
                 "count": "完成任务数量",
                 "gameAmount": "奖励游戏币",
                 "zfbAmount": "奖励自发币",
-                "trxAmount": "奖励TRX"
+                "trxAmount": "奖励TRX 最小",
+                "trxAmountMAX": "奖励TRX 最多"
             }
         ]
     }
