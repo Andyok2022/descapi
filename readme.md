@@ -46,6 +46,7 @@
         "code": "0正常,其余的会有msg 提示错误，游戏中如需提示需要转当前选择的语言文案提示"
         "inviteUrl": "邀请链接",
         "inviteDesc": "邀请英文文案",
+        "groupURL":groupURL,//加入群组id
         "userInfo": UserObject,
     }
     ```
