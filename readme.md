@@ -442,11 +442,9 @@
         "end": 100 //第几条结束，默认100
         "inviteRecordList": [
             {
-                "id": 1,
                 "userid": 123456789, //用户id
                 "type":1,//1 邀请 2 进入频道 3消耗 4消耗TRX 5充值TRX 6购买盲盒 7转账（提现）
                 "amount":10,//trx 数量
-                "inviteCount": 1,//0 第一把游戏的时候，大于1邀请第几个人的时候
                 "zFBBalance": 123456,//送自发币金额
                 "physicalPower": 123456,//送体力数量
                 "time": "时间戳"
